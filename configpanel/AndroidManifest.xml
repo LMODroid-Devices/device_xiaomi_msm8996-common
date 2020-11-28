@@ -16,12 +16,12 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.lineageos.settings.device"
+    package="io.libremobileos.settings.device"
     android:versionCode="6"
     android:versionName="2.5"
     android:sharedUserId="android.uid.system">
 
-    <protected-broadcast android:name="org.lineageos.settings.device.CUST_UPDATE" />
+    <protected-broadcast android:name="io.libremobileos.settings.device.CUST_UPDATE" />
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
@@ -37,7 +37,7 @@
 
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
-            android:authorities="org.lineageos.settings.device"
+            android:authorities="io.libremobileos.settings.device"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"
