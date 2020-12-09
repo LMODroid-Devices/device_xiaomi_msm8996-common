@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
  *           (C) 2017,2019 The LineageOS Project
+ * Copyright (C) 2020 The LibreMobileOS Foundation
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,6 +31,8 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreference;
 
+import io.libremobileos.support.util.FileUtils;
+import io.libremobileos.support.util.PackageManagerUtils;
 
 public class ButtonSettingsFragment extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {

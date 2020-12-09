@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2016 The CyanogenMod Project
  *           (C) 2017-2019 The LineageOS Project
+ * Copyright (C) 2020 The LibreMobileOS Foundation
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,6 +27,8 @@ import android.content.SharedPreferences;
 import android.util.Log;
 
 import androidx.preference.PreferenceManager;
+
+import io.libremobileos.support.util.FileUtils;
 
 
 public class BootCompletedReceiver extends BroadcastReceiver {

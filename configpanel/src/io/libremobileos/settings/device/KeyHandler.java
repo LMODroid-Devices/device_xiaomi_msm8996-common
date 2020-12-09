@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2017-2019 The LineageOS Project
+ * Copyright (C) 2020 The LibreMobileOS Foundation
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,6 +16,8 @@
  */
 
 package io.libremobileos.settings.device;
+
+import io.libremobileos.support.util.FileUtils;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
