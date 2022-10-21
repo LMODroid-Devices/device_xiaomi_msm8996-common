@@ -87,6 +87,7 @@ on charger
     setprop sys.usb.configfs 1
 
     start vendor.hvdcp_opti
+    start vendor.power_off_alarm
     start thermal-engine
 
 on enable-low-power
@@ -219,3 +220,9 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     class main
     user root
     group system wakelock
+
+service vendor.power_off_alarm /vendor/bin/power_off_alarm
+    class core
+    group system
+    disabled
+    oneshot
