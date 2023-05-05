@@ -347,6 +347,9 @@ service vendor.dataqti /vendor/bin/qti
     group radio oem_2901 diag usb
     writepid /dev/cpuset/system-background/tasks
 
+on property:persist.sys.xtra-daemon.enabled=*
+    restart vendor.loc_launcher
+
 service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
     user system
