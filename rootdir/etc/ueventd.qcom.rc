@@ -281,3 +281,6 @@ firmware_directories /vendor/firmware_mnt/image/
 
 # Kmsg device
 /dev/kmsg                 0620   root       system
+
+# socinfo
+/sys/devices/soc0        serial_number 0000  root       root
