@@ -281,10 +281,3 @@ firmware_directories /vendor/firmware_mnt/image/
 
 # Kmsg device
 /dev/kmsg                 0620   root       system
-
-# socinfo
-/sys/devices/soc0        serial_number 0000  root       root
-
-# Charger
-/sys/class/power_supply/battery  battery_charging_enabled   0660    system  system
-/sys/class/power_supply/battery  charging_enabled           0660    system  system

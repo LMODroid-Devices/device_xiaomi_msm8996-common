@@ -54,9 +54,6 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := vendor/xiaomi/mi8996_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8996
 
-# Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
-
 # Platform
 TARGET_BOARD_PLATFORM := msm8996
 
