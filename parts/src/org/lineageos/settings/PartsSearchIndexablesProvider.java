@@ -35,7 +35,7 @@ import static android.provider.SearchIndexablesContract.INDEXABLES_RAW_COLUMNS;
 import static android.provider.SearchIndexablesContract.INDEXABLES_XML_RES_COLUMNS;
 import static android.provider.SearchIndexablesContract.NON_INDEXABLES_KEYS_COLUMNS;
 
-import org.lineageos.internal.util.FileUtils;
+import com.libremobileos.util.FileUtils;
 import org.lineageos.settings.buttons.ButtonConstants;
 import org.lineageos.settings.buttons.ButtonSettingsActivity;
 import org.lineageos.settings.buttons.ButtonUtils;
