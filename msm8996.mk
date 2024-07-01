@@ -21,6 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/msm8996-common/msm8996-common-vendor.mk)
 
@@ -145,6 +148,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5:64 \
     camera.msm8996 \
     libgui_vendor \
+    libion.vendor \
     libstdc++_vendor \
     vendor.qti.hardware.camera.device@1.0
 
@@ -157,6 +161,10 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
+
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
 
 # Device settings
 PRODUCT_PACKAGES += \
@@ -187,10 +195,6 @@ PRODUCT_PACKAGES += \
 
 # Fastboot
 TARGET_BOARD_FASTBOOT_INFO_FILE := $(LOCAL_PATH)/fastboot-info.txt
-
-# For config.fs
-PRODUCT_PACKAGES += \
-    fs_config_files
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -230,6 +234,7 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0.vendor\
     android.hidl.manager@1.0 \
     android.hidl.memory@1.0.vendor \
+    libhidlmemory.vendor \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
@@ -257,7 +262,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_8996
+    android.hardware.light-service.xiaomi
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -347,7 +352,9 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.0.vendor \
+    libnetutils.vendor \
     librmnetctl \
+    libsqlite.vendor \
     libxml2
 
 # Seccomp policy
@@ -358,7 +365,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@1.0-impl:64 \
-    android.hardware.sensors@1.0-service
+    android.hardware.sensors@1.0-service \
+    libpower.vendor
 
 # Shims
 PRODUCT_PACKAGES += \
@@ -402,8 +410,7 @@ PRODUCT_COPY_FILES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl:64 \
-    android.hardware.vibrator@1.0-service
+    vendor.qti.hardware.vibrator.service
 
 # WiFi
 PRODUCT_PACKAGES += \
